@@ -6,12 +6,35 @@
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
         Title="MainWondow" Height="450" Width="800" ResizeMode="NoResize">
-    <Grid Background="#FF006996">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors.Wpf;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors.Wpf;component/Themes/Recommended/Primary/MaterialDesignColor.Purple.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="#FF006996" Margin="0,0,0,-2">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="4*"/>
-            <ColumnDefinition Width="695*"/>
-            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="289*"/>
+            <ColumnDefinition Width="333*"/>
+            <ColumnDefinition Width="168*"/>
         </Grid.ColumnDefinitions>
+        <Label Content="Login" Grid.Column="1" HorizontalAlignment="Left" Margin="56,66,0,0" VerticalAlignment="Top" Height="26" Width="39"/>
+        <Label Content="Password" Grid.Column="1" HorizontalAlignment="Left" Margin="56,97,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+        <TextBox Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="115,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Grid.Column="1" HorizontalAlignment="Left" Margin="115,98,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <Label Content="Registration" Grid.Column="1" HorizontalAlignment="Left" Margin="57,35,0,0" VerticalAlignment="Top" Height="26" Width="74"/>
+        <CheckBox Content="admin" Grid.Column="1" HorizontalAlignment="Left" Margin="63,143,0,0" VerticalAlignment="Top" Height="16" Width="50"/>
+        <Label Content="Login" Grid.Column="2" HorizontalAlignment="Left" Margin="71,66,0,0" VerticalAlignment="Top" Height="26" Width="39"/>
+        <Label Content="Password" Grid.Column="2" HorizontalAlignment="Left" Margin="71,97,0,0" VerticalAlignment="Top" Height="26" Width="60"/>
+        <TextBox Grid.Column="2" HorizontalAlignment="Left" Height="23" Margin="130,69,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <PasswordBox Grid.Column="2" HorizontalAlignment="Left" Margin="130,98,0,0" VerticalAlignment="Top" Height="25" Width="120"/>
+        <Label Content="Autentification" Grid.Column="2" HorizontalAlignment="Left" Margin="72,35,0,0" VerticalAlignment="Top" Height="26" Width="88"/>
+        <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" ToolTip="Resource name: MaterialDesignRaisedDarkButton" Content="Sing up" Height="Auto" Margin="149,133,60,265" Grid.Column="1"/>
 
     </Grid>
 </Window>
